@@ -36,7 +36,7 @@ async def _start(client, message):
       sent_message.edit(f'**ERROR:** ```{e}```')
   filesize = humanbytes(os.path.getsize(filename))
   file_name = os.path.basename(filename)
-  await sent_message.edit(f'✅ **Download Completed**\n**Filename:** ```{file_name}```\n**Size:** ```{filesize}```\n__Now starting upload...__')
+  await sent_message.edit(f'✅ **Download Completed.**\n**Filename:** ```{file_name}```\n**Size:** ```{filesize}```\n__Now starting upload...__')
   file_id = await upload_file(
         creds=creds,
         file_path=filename,
@@ -44,7 +44,7 @@ async def _start(client, message):
         parent_id=parent_id,
         message=sent_message)
   if file_id not in ('error', 'LimitExceeded'):
-    await sent_message.edit("✅ **Uploaded Successfully.**\n<a href='https://drive.google.com/open?id={}'>{}</a> __({})__".format(file_id, file_name, filesize))
+    await sent_message.edit("✅ **Uploaded Successfully.JOIN NOW @VKPROJECTS**\n<a href='https://drive.google.com/open?id={}'>{}</a> __({})__".format(file_id, file_name, filesize))
   elif file_id == 'LimitExceeded':
     await sent_message.edit('❗ **Upload limit exceeded**\n__Try after 24 hours__')
   else:
