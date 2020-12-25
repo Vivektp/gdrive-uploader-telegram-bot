@@ -36,7 +36,7 @@ async def _start(client, message):
       sent_message.edit(f'**ERROR:** ```{e}```')
   filesize = humanbytes(os.path.getsize(filename))
   file_name = os.path.basename(filename)
-  await sent_message.edit(f'✅ **Download Completed**\n**Filename:** ```{file_name}```\n**Size:** ```{filesize}```\n__Now starting upload...__')
+  await sent_message.edit(f'✅ **Download Completed...JOIN NOW @VKPROJECTS**\n**Filename:** ```{file_name}```\n**Size:** ```{filesize}```\n__Now starting upload...__')
   file_id = await upload_file(
         creds=creds,
         file_path=filename,
